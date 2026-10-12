@@ -19,14 +19,32 @@
 },
 {
   "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
-  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack_core.dir/src/Game.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Game.cpp\"",
-  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Game.cpp",
-  "output": "CMakeFiles/blackjack_core.dir/src/Game.cpp.o"
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack_core.dir/src/game.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/game.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/game.cpp",
+  "output": "CMakeFiles/blackjack_core.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack_core.dir/src/Agent.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Agent.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Agent.cpp",
+  "output": "CMakeFiles/blackjack_core.dir/src/Agent.cpp.o"
+},
+{
+  "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/RandomAgent.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/RandomAgent.cpp",
+  "output": "CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o"
 },
 {
   "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
   "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack.dir/app/main.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/app/main.cpp\"",
   "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/app/main.cpp",
   "output": "CMakeFiles/blackjack.dir/app/main.cpp.o"
+},
+{
+  "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/evaluate.dir/training/evaluate.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/training/evaluate.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/training/evaluate.cpp",
+  "output": "CMakeFiles/evaluate.dir/training/evaluate.cpp.o"
 }
 ]

@@ -18,10 +18,7 @@ void Game::startRound() {
         );
     }
 
-    // Reshuffle if there are not enough cards for a new round.
-    if (deck.cardsRemaining() < 4) {
-        deck.reset();
-    }
+    deck.reset();
 
     // Clear the previous hands.
     playerHand = Hand{};

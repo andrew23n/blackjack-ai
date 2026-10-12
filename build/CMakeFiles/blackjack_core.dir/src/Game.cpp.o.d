@@ -1,5 +1,5 @@
-CMakeFiles/blackjack_core.dir/src/Game.cpp.o: \
-  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/Game.cpp \
+CMakeFiles/blackjack_core.dir/src/game.cpp.o: \
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/game.cpp \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Game.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Deck.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Card.h \

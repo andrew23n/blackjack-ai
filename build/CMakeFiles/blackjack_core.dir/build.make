@@ -114,26 +114,56 @@ CMakeFiles/blackjack_core.dir/src/Hand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/Hand.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Hand.cpp" -o CMakeFiles/blackjack_core.dir/src/Hand.cpp.s
 
-CMakeFiles/blackjack_core.dir/src/Game.cpp.o: CMakeFiles/blackjack_core.dir/flags.make
-CMakeFiles/blackjack_core.dir/src/Game.cpp.o: /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/Game.cpp
-CMakeFiles/blackjack_core.dir/src/Game.cpp.o: CMakeFiles/blackjack_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/blackjack_core.dir/src/Game.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_core.dir/src/Game.cpp.o -MF CMakeFiles/blackjack_core.dir/src/Game.cpp.o.d -o CMakeFiles/blackjack_core.dir/src/Game.cpp.o -c "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Game.cpp"
+CMakeFiles/blackjack_core.dir/src/game.cpp.o: CMakeFiles/blackjack_core.dir/flags.make
+CMakeFiles/blackjack_core.dir/src/game.cpp.o: /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/game.cpp
+CMakeFiles/blackjack_core.dir/src/game.cpp.o: CMakeFiles/blackjack_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/blackjack_core.dir/src/game.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_core.dir/src/game.cpp.o -MF CMakeFiles/blackjack_core.dir/src/game.cpp.o.d -o CMakeFiles/blackjack_core.dir/src/game.cpp.o -c "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/game.cpp"
 
-CMakeFiles/blackjack_core.dir/src/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_core.dir/src/Game.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Game.cpp" > CMakeFiles/blackjack_core.dir/src/Game.cpp.i
+CMakeFiles/blackjack_core.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_core.dir/src/game.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/game.cpp" > CMakeFiles/blackjack_core.dir/src/game.cpp.i
 
-CMakeFiles/blackjack_core.dir/src/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/Game.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Game.cpp" -o CMakeFiles/blackjack_core.dir/src/Game.cpp.s
+CMakeFiles/blackjack_core.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/game.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/game.cpp" -o CMakeFiles/blackjack_core.dir/src/game.cpp.s
+
+CMakeFiles/blackjack_core.dir/src/Agent.cpp.o: CMakeFiles/blackjack_core.dir/flags.make
+CMakeFiles/blackjack_core.dir/src/Agent.cpp.o: /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/Agent.cpp
+CMakeFiles/blackjack_core.dir/src/Agent.cpp.o: CMakeFiles/blackjack_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/blackjack_core.dir/src/Agent.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_core.dir/src/Agent.cpp.o -MF CMakeFiles/blackjack_core.dir/src/Agent.cpp.o.d -o CMakeFiles/blackjack_core.dir/src/Agent.cpp.o -c "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Agent.cpp"
+
+CMakeFiles/blackjack_core.dir/src/Agent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_core.dir/src/Agent.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Agent.cpp" > CMakeFiles/blackjack_core.dir/src/Agent.cpp.i
+
+CMakeFiles/blackjack_core.dir/src/Agent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/Agent.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/Agent.cpp" -o CMakeFiles/blackjack_core.dir/src/Agent.cpp.s
+
+CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o: CMakeFiles/blackjack_core.dir/flags.make
+CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o: /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/RandomAgent.cpp
+CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o: CMakeFiles/blackjack_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o -MF CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o.d -o CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o -c "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/RandomAgent.cpp"
+
+CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/RandomAgent.cpp" > CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.i
+
+CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/RandomAgent.cpp" -o CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s
 
 # Object files for target blackjack_core
 blackjack_core_OBJECTS = \
 "CMakeFiles/blackjack_core.dir/src/Card.cpp.o" \
 "CMakeFiles/blackjack_core.dir/src/Deck.cpp.o" \
 "CMakeFiles/blackjack_core.dir/src/Hand.cpp.o" \
-"CMakeFiles/blackjack_core.dir/src/Game.cpp.o"
+"CMakeFiles/blackjack_core.dir/src/game.cpp.o" \
+"CMakeFiles/blackjack_core.dir/src/Agent.cpp.o" \
+"CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o"
 
 # External object files for target blackjack_core
 blackjack_core_EXTERNAL_OBJECTS =
@@ -141,10 +171,12 @@ blackjack_core_EXTERNAL_OBJECTS =
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Card.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Deck.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Hand.cpp.o
-libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Game.cpp.o
+libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/game.cpp.o
+libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Agent.cpp.o
+libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/build.make
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libblackjack_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libblackjack_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/blackjack_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/blackjack_core.dir/link.txt --verbose=$(VERBOSE)
 

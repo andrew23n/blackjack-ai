@@ -1,9 +1,8 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "libblackjack_core.a"
+			"path" : "blackjack"
 		}
 	],
 	"backtrace" : 1,
@@ -11,8 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_library",
-			"target_include_directories"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -26,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 11,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 18,
+				"line" : 28,
 				"parent" : 0
 			}
 		]
@@ -42,6 +41,13 @@
 		"major" : 2,
 		"minor" : 11
 	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "blackjack_core::@6890427a1f51a3e7e1df"
+		}
+	],
 	"compileGroups" : 
 	[
 		{
@@ -69,16 +75,47 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1,
-				2,
-				3
+				0
 			]
 		}
 	],
-	"id" : "blackjack_core::@6890427a1f51a3e7e1df",
-	"name" : "blackjack_core",
-	"nameOnDisk" : "libblackjack_core.a",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "blackjack_core::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "blackjack::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-search_paths_first -Wl,-headerpad_max_install_names",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libblackjack_core.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "blackjack_core::@6890427a1f51a3e7e1df"
+		}
+	],
+	"name" : "blackjack",
+	"nameOnDisk" : "blackjack",
 	"paths" : 
 	{
 		"build" : ".",
@@ -90,10 +127,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1,
-				2,
-				3
+				0
 			]
 		}
 	],
@@ -106,39 +140,9 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "src/Card.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"backtraces" : 
-			[
-				1
-			],
-			"compileGroupIndex" : 0,
-			"path" : "src/Deck.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"backtraces" : 
-			[
-				1
-			],
-			"compileGroupIndex" : 0,
-			"path" : "src/Hand.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"backtraces" : 
-			[
-				1
-			],
-			"compileGroupIndex" : 0,
-			"path" : "src/Game.cpp",
+			"path" : "app/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "EXECUTABLE"
 }

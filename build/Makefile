@@ -142,6 +142,19 @@ blackjack/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/build
 .PHONY : blackjack/fast
 
+#=============================================================================
+# Target rules for targets named evaluate
+
+# Build rule for target.
+evaluate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 evaluate
+.PHONY : evaluate
+
+# fast build rule for target.
+evaluate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/build
+.PHONY : evaluate/fast
+
 app/main.o: app/main.cpp.o
 .PHONY : app/main.o
 
@@ -165,6 +178,30 @@ app/main.s: app/main.cpp.s
 app/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
+
+src/Agent.o: src/Agent.cpp.o
+.PHONY : src/Agent.o
+
+# target to build an object file
+src/Agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Agent.cpp.o
+.PHONY : src/Agent.cpp.o
+
+src/Agent.i: src/Agent.cpp.i
+.PHONY : src/Agent.i
+
+# target to preprocess a source file
+src/Agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Agent.cpp.i
+.PHONY : src/Agent.cpp.i
+
+src/Agent.s: src/Agent.cpp.s
+.PHONY : src/Agent.s
+
+# target to generate assembly for a file
+src/Agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Agent.cpp.s
+.PHONY : src/Agent.cpp.s
 
 src/Card.o: src/Card.cpp.o
 .PHONY : src/Card.o
@@ -214,30 +251,6 @@ src/Deck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Deck.cpp.s
 .PHONY : src/Deck.cpp.s
 
-src/Game.o: src/Game.cpp.o
-.PHONY : src/Game.o
-
-# target to build an object file
-src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
-
-src/Game.i: src/Game.cpp.i
-.PHONY : src/Game.i
-
-# target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
-
-src/Game.s: src/Game.cpp.s
-.PHONY : src/Game.s
-
-# target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
-
 src/Hand.o: src/Hand.cpp.o
 .PHONY : src/Hand.o
 
@@ -262,6 +275,78 @@ src/Hand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Hand.cpp.s
 .PHONY : src/Hand.cpp.s
 
+src/RandomAgent.o: src/RandomAgent.cpp.o
+.PHONY : src/RandomAgent.o
+
+# target to build an object file
+src/RandomAgent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o
+.PHONY : src/RandomAgent.cpp.o
+
+src/RandomAgent.i: src/RandomAgent.cpp.i
+.PHONY : src/RandomAgent.i
+
+# target to preprocess a source file
+src/RandomAgent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.i
+.PHONY : src/RandomAgent.cpp.i
+
+src/RandomAgent.s: src/RandomAgent.cpp.s
+.PHONY : src/RandomAgent.s
+
+# target to generate assembly for a file
+src/RandomAgent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s
+.PHONY : src/RandomAgent.cpp.s
+
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
+
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
+
+training/evaluate.o: training/evaluate.cpp.o
+.PHONY : training/evaluate.o
+
+# target to build an object file
+training/evaluate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/training/evaluate.cpp.o
+.PHONY : training/evaluate.cpp.o
+
+training/evaluate.i: training/evaluate.cpp.i
+.PHONY : training/evaluate.i
+
+# target to preprocess a source file
+training/evaluate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/training/evaluate.cpp.i
+.PHONY : training/evaluate.cpp.i
+
+training/evaluate.s: training/evaluate.cpp.s
+.PHONY : training/evaluate.s
+
+# target to generate assembly for a file
+training/evaluate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/training/evaluate.cpp.s
+.PHONY : training/evaluate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -272,21 +357,31 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... blackjack"
 	@echo "... blackjack_core"
+	@echo "... evaluate"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
+	@echo "... src/Agent.o"
+	@echo "... src/Agent.i"
+	@echo "... src/Agent.s"
 	@echo "... src/Card.o"
 	@echo "... src/Card.i"
 	@echo "... src/Card.s"
 	@echo "... src/Deck.o"
 	@echo "... src/Deck.i"
 	@echo "... src/Deck.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
 	@echo "... src/Hand.o"
 	@echo "... src/Hand.i"
 	@echo "... src/Hand.s"
+	@echo "... src/RandomAgent.o"
+	@echo "... src/RandomAgent.i"
+	@echo "... src/RandomAgent.s"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
+	@echo "... training/evaluate.o"
+	@echo "... training/evaluate.i"
+	@echo "... training/evaluate.s"
 .PHONY : help
 
 

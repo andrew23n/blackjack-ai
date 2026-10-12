@@ -65,11 +65,13 @@ CMAKE_BINARY_DIR = "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/bu
 # The main recursive "all" target.
 all: CMakeFiles/blackjack_core.dir/all
 all: CMakeFiles/blackjack.dir/all
+all: CMakeFiles/evaluate.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/blackjack_core.dir/codegen
 codegen: CMakeFiles/blackjack.dir/codegen
+codegen: CMakeFiles/evaluate.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -79,6 +81,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/blackjack_core.dir/clean
 clean: CMakeFiles/blackjack.dir/clean
+clean: CMakeFiles/evaluate.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -88,12 +91,12 @@ clean: CMakeFiles/blackjack.dir/clean
 CMakeFiles/blackjack_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=3,4,5,6,7 "Built target blackjack_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=3,4,5,6,7,8,9 "Built target blackjack_core"
 .PHONY : CMakeFiles/blackjack_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/blackjack_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/blackjack_core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 0
 .PHONY : CMakeFiles/blackjack_core.dir/rule
@@ -105,7 +108,7 @@ blackjack_core: CMakeFiles/blackjack_core.dir/rule
 # codegen rule for target.
 CMakeFiles/blackjack_core.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=3,4,5,6,7 "Finished codegen for target blackjack_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=3,4,5,6,7,8,9 "Finished codegen for target blackjack_core"
 .PHONY : CMakeFiles/blackjack_core.dir/codegen
 
 # clean rule for target.
@@ -125,7 +128,7 @@ CMakeFiles/blackjack.dir/all: CMakeFiles/blackjack_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/blackjack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/blackjack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 0
 .PHONY : CMakeFiles/blackjack.dir/rule
@@ -144,6 +147,38 @@ CMakeFiles/blackjack.dir/codegen:
 CMakeFiles/blackjack.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/clean
 .PHONY : CMakeFiles/blackjack.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/evaluate.dir
+
+# All Build rule for target.
+CMakeFiles/evaluate.dir/all: CMakeFiles/blackjack_core.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=10,11 "Built target evaluate"
+.PHONY : CMakeFiles/evaluate.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/evaluate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/evaluate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" 0
+.PHONY : CMakeFiles/evaluate.dir/rule
+
+# Convenience name for target.
+evaluate: CMakeFiles/evaluate.dir/rule
+.PHONY : evaluate
+
+# codegen rule for target.
+CMakeFiles/evaluate.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=10,11 "Finished codegen for target evaluate"
+.PHONY : CMakeFiles/evaluate.dir/codegen
+
+# clean rule for target.
+CMakeFiles/evaluate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/clean
+.PHONY : CMakeFiles/evaluate.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

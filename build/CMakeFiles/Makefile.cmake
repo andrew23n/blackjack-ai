@@ -50,4 +50,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/blackjack_core.dir/DependInfo.cmake"
   "CMakeFiles/blackjack.dir/DependInfo.cmake"
+  "CMakeFiles/evaluate.dir/DependInfo.cmake"
   )
