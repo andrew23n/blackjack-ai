@@ -1,0 +1,2 @@
+/usr/bin/ar qc libblackjack_core.a CMakeFiles/blackjack_core.dir/src/Card.cpp.o CMakeFiles/blackjack_core.dir/src/Deck.cpp.o CMakeFiles/blackjack_core.dir/src/Hand.cpp.o CMakeFiles/blackjack_core.dir/src/Game.cpp.o
+/usr/bin/ranlib libblackjack_core.a
