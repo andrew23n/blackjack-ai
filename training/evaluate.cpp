@@ -1,8 +1,8 @@
 #include "BasicStrategyAgent.h"
+#include "QLearningAgent.h"
 #include "RandomAgent.h"
 #include "Game.h"
 
-#include <cmath>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -10,7 +10,8 @@
 
 namespace {
 
-constexpr int NUM_ROUNDS = 100'000;
+constexpr int NUM_EVALUATION_ROUNDS = 100'000;
+
 constexpr double INITIAL_BANKROLL = 1'000'000'000.0;
 constexpr double INITIAL_BET = 10.0;
 
@@ -33,58 +34,14 @@ std::string formatMoney(double amount) {
     std::ostringstream output;
 
     if (amount < 0.0) {
-        output << "-$" << std::fixed << std::setprecision(2)
-               << std::abs(amount);
+        output << "-$" << std::fixed
+               << std::setprecision(2) << -amount;
     } else {
-        output << "$" << std::fixed << std::setprecision(2)
-               << amount;
+        output << "$" << std::fixed
+               << std::setprecision(2) << amount;
     }
 
     return output.str();
-}
-
-GameAction fallbackHitOrStand(
-    const Hand& hand,
-    const Card& dealerUpcard
-) {
-    const int total = hand.getTotal();
-    const int dealer = dealerUpcard.getValue();
-
-    if (hand.hasUsableAce()) {
-        if (total >= 19) {
-            return GameAction::Stand;
-        }
-
-        if (total == 18) {
-            return (dealer >= 2 && dealer <= 8)
-                ? GameAction::Stand
-                : GameAction::Hit;
-        }
-
-        return GameAction::Hit;
-    }
-
-    if (total >= 17) {
-        return GameAction::Stand;
-    }
-
-    if (total <= 11) {
-        return GameAction::Hit;
-    }
-
-    if (total == 12) {
-        return (dealer >= 4 && dealer <= 6)
-            ? GameAction::Stand
-            : GameAction::Hit;
-    }
-
-    if (total <= 16) {
-        return (dealer >= 2 && dealer <= 6)
-            ? GameAction::Stand
-            : GameAction::Hit;
-    }
-
-    return GameAction::Stand;
 }
 
 EvaluationResults evaluateAgent(
@@ -113,21 +70,51 @@ EvaluationResults evaluateAgent(
             const Card& dealerUpcard =
                 game.getDealerHand().getCards().front();
 
-            GameAction action =
+            const GameAction action =
                 agent.chooseAction(hand, dealerUpcard);
 
-            // Allow only one split per round.
-            // Do not allow doubling after splitting.
-            if (game.getPlayerHandCount() > 1 &&
-                (action == GameAction::Split ||
-                 action == GameAction::DoubleDown)) {
-                action = fallbackHitOrStand(
-                    hand,
-                    dealerUpcard
-                );
+            // The Q-learning and random agents support
+            // only Hit and Stand. Basic strategy may also
+            // request DoubleDown or Split.
+            GameAction appliedAction = action;
+
+            if (action == GameAction::Split ||
+                action == GameAction::DoubleDown) {
+
+                // Use a simple Hit/Stand fallback for agents
+                // whose action set is restricted.
+                const int total = hand.getTotal();
+                const int dealer = dealerUpcard.getValue();
+
+                if (hand.hasUsableAce()) {
+                    if (total >= 19) {
+                        appliedAction = GameAction::Stand;
+                    } else if (total == 18 &&
+                               dealer >= 2 && dealer <= 8) {
+                        appliedAction = GameAction::Stand;
+                    } else {
+                        appliedAction = GameAction::Hit;
+                    }
+                } else if (total >= 17) {
+                    appliedAction = GameAction::Stand;
+                } else if (total <= 11) {
+                    appliedAction = GameAction::Hit;
+                } else if (total == 12) {
+                    appliedAction =
+                        (dealer >= 4 && dealer <= 6)
+                        ? GameAction::Stand
+                        : GameAction::Hit;
+                } else if (total <= 16) {
+                    appliedAction =
+                        (dealer >= 2 && dealer <= 6)
+                        ? GameAction::Stand
+                        : GameAction::Hit;
+                } else {
+                    appliedAction = GameAction::Stand;
+                }
             }
 
-            game.playAction(action);
+            game.playAction(appliedAction);
         }
 
         const double profit = game.getRoundProfit();
@@ -148,11 +135,10 @@ EvaluationResults evaluateAgent(
 }
 
 void printResults(
-    const char* agentName,
+    const std::string& agentName,
     const EvaluationResults& results
 ) {
     std::cout << "\n=== " << agentName << " ===\n";
-
     std::cout << "Rounds played: "
               << results.rounds << '\n';
 
@@ -166,16 +152,13 @@ void printResults(
     std::cout << std::fixed << std::setprecision(2);
 
     std::cout << "Wins: " << results.wins << " ("
-              << 100.0 * results.wins / rounds
-              << "%)\n";
+              << 100.0 * results.wins / rounds << "%)\n";
 
     std::cout << "Losses: " << results.losses << " ("
-              << 100.0 * results.losses / rounds
-              << "%)\n";
+              << 100.0 * results.losses / rounds << "%)\n";
 
     std::cout << "Pushes: " << results.pushes << " ("
-              << 100.0 * results.pushes / rounds
-              << "%)\n";
+              << 100.0 * results.pushes / rounds << "%)\n";
 
     std::cout << "Total net profit: "
               << formatMoney(results.totalProfit) << '\n';
@@ -183,54 +166,57 @@ void printResults(
     std::cout << "Average profit per round: "
               << formatMoney(results.averageProfit()) << '\n';
 
-    std::cout << "Starting bankroll: "
-              << formatMoney(INITIAL_BANKROLL) << '\n';
-
-    std::cout << "Ending bankroll: "
-              << formatMoney(
-                     INITIAL_BANKROLL + results.totalProfit
-                 ) << '\n';
+    std::cout << "Average profit as % of initial bet: "
+              << 100.0 * results.averageProfit() / INITIAL_BET
+              << "%\n";
 }
 
 } // namespace
 
 int main() {
-    BasicStrategyAgent basicStrategy;
+    QLearningAgent qLearningAgent;
+
+    // Load the trained Q-table. Do not retrain here.
+    if (!qLearningAgent.loadQTable("data/q_table.txt")) {
+        std::cerr
+            << "Error: Could not load data/q_table.txt.\n"
+            << "Run ./build/train first to train and save the agent.\n";
+        return 1;
+    }
+
+    // Greedy policy: always choose the best learned action.
+    qLearningAgent.setEpsilon(0.0);
+
+    BasicStrategyAgent basicStrategyAgent;
     RandomAgent randomAgent;
 
+    std::cout << "Evaluating agents over "
+              << NUM_EVALUATION_ROUNDS
+              << " rounds each...\n";
+
+    const EvaluationResults qResults =
+        evaluateAgent(qLearningAgent, NUM_EVALUATION_ROUNDS);
+
     const EvaluationResults basicResults =
-        evaluateAgent(basicStrategy, NUM_ROUNDS);
+        evaluateAgent(basicStrategyAgent, NUM_EVALUATION_ROUNDS);
 
     const EvaluationResults randomResults =
-        evaluateAgent(randomAgent, NUM_ROUNDS);
+        evaluateAgent(randomAgent, NUM_EVALUATION_ROUNDS);
 
-    std::cout << "Blackjack Agent Evaluation\n";
-    std::cout << "Rounds per agent: " << NUM_ROUNDS << '\n';
-    std::cout << "Initial bet: "
-              << formatMoney(INITIAL_BET) << '\n';
-    std::cout << "Starting bankroll per agent: "
-              << formatMoney(INITIAL_BANKROLL) << '\n';
-
+    printResults("Q-Learning Agent", qResults);
     printResults("Basic Strategy Agent", basicResults);
     printResults("Random Agent", randomResults);
 
-    std::cout << "\n=== Comparison ===\n";
+    std::cout << "\n=== Average Profit Comparison ===\n";
 
-    std::cout << "Basic strategy average profit: "
-              << formatMoney(basicResults.averageProfit())
-              << '\n';
+    std::cout << "Q-learning: "
+              << formatMoney(qResults.averageProfit()) << '\n';
 
-    std::cout << "Random agent average profit: "
-              << formatMoney(randomResults.averageProfit())
-              << '\n';
+    std::cout << "Basic strategy: "
+              << formatMoney(basicResults.averageProfit()) << '\n';
 
-    const double profitDifference =
-        basicResults.averageProfit()
-        - randomResults.averageProfit();
-
-    std::cout << "Average profit difference: "
-              << formatMoney(profitDifference)
-              << " per round\n";
+    std::cout << "Random: "
+              << formatMoney(randomResults.averageProfit()) << '\n';
 
     return 0;
 }
