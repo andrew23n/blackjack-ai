@@ -1,5 +1,6 @@
 /Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles/blackjack_core.dir
 /Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles/blackjack.dir
 /Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles/evaluate.dir
+/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles/train.dir
 /Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles/edit_cache.dir
 /Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles/rebuild_cache.dir

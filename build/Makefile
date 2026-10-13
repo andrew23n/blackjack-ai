@@ -155,6 +155,19 @@ evaluate/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/build
 .PHONY : evaluate/fast
 
+#=============================================================================
+# Target rules for targets named train
+
+# Build rule for target.
+train: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 train
+.PHONY : train
+
+# fast build rule for target.
+train/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
+.PHONY : train/fast
+
 app/main.o: app/main.cpp.o
 .PHONY : app/main.o
 
@@ -299,6 +312,30 @@ src/Hand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Hand.cpp.s
 .PHONY : src/Hand.cpp.s
 
+src/QLearningAgent.o: src/QLearningAgent.cpp.o
+.PHONY : src/QLearningAgent.o
+
+# target to build an object file
+src/QLearningAgent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.o
+.PHONY : src/QLearningAgent.cpp.o
+
+src/QLearningAgent.i: src/QLearningAgent.cpp.i
+.PHONY : src/QLearningAgent.i
+
+# target to preprocess a source file
+src/QLearningAgent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.i
+.PHONY : src/QLearningAgent.cpp.i
+
+src/QLearningAgent.s: src/QLearningAgent.cpp.s
+.PHONY : src/QLearningAgent.s
+
+# target to generate assembly for a file
+src/QLearningAgent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.s
+.PHONY : src/QLearningAgent.cpp.s
+
 src/RandomAgent.o: src/RandomAgent.cpp.o
 .PHONY : src/RandomAgent.o
 
@@ -371,6 +408,30 @@ training/evaluate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluate.dir/build.make CMakeFiles/evaluate.dir/training/evaluate.cpp.s
 .PHONY : training/evaluate.cpp.s
 
+training/train.o: training/train.cpp.o
+.PHONY : training/train.o
+
+# target to build an object file
+training/train.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/training/train.cpp.o
+.PHONY : training/train.cpp.o
+
+training/train.i: training/train.cpp.i
+.PHONY : training/train.i
+
+# target to preprocess a source file
+training/train.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/training/train.cpp.i
+.PHONY : training/train.cpp.i
+
+training/train.s: training/train.cpp.s
+.PHONY : training/train.s
+
+# target to generate assembly for a file
+training/train.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/training/train.cpp.s
+.PHONY : training/train.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -382,6 +443,7 @@ help:
 	@echo "... blackjack"
 	@echo "... blackjack_core"
 	@echo "... evaluate"
+	@echo "... train"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
@@ -400,6 +462,9 @@ help:
 	@echo "... src/Hand.o"
 	@echo "... src/Hand.i"
 	@echo "... src/Hand.s"
+	@echo "... src/QLearningAgent.o"
+	@echo "... src/QLearningAgent.i"
+	@echo "... src/QLearningAgent.s"
 	@echo "... src/RandomAgent.o"
 	@echo "... src/RandomAgent.i"
 	@echo "... src/RandomAgent.s"
@@ -409,6 +474,9 @@ help:
 	@echo "... training/evaluate.o"
 	@echo "... training/evaluate.i"
 	@echo "... training/evaluate.s"
+	@echo "... training/train.o"
+	@echo "... training/train.i"
+	@echo "... training/train.s"
 .PHONY : help
 
 

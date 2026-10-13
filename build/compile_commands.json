@@ -43,6 +43,12 @@
 },
 {
   "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/QLearningAgent.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/QLearningAgent.cpp",
+  "output": "CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.o"
+},
+{
+  "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
   "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack.dir/app/main.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/app/main.cpp\"",
   "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/app/main.cpp",
   "output": "CMakeFiles/blackjack.dir/app/main.cpp.o"
@@ -52,5 +58,11 @@
   "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/evaluate.dir/training/evaluate.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/training/evaluate.cpp\"",
   "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/training/evaluate.cpp",
   "output": "CMakeFiles/evaluate.dir/training/evaluate.cpp.o"
+},
+{
+  "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/train.dir/training/train.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/training/train.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/training/train.cpp",
+  "output": "CMakeFiles/train.dir/training/train.cpp.o"
 }
 ]

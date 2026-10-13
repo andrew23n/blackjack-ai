@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/blackjack_core.dir/src/Deck.cpp.o.d"
   "CMakeFiles/blackjack_core.dir/src/Hand.cpp.o"
   "CMakeFiles/blackjack_core.dir/src/Hand.cpp.o.d"
+  "CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.o"
+  "CMakeFiles/blackjack_core.dir/src/QLearningAgent.cpp.o.d"
   "CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o"
   "CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o.d"
   "CMakeFiles/blackjack_core.dir/src/game.cpp.o"

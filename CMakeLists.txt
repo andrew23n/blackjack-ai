@@ -15,6 +15,7 @@ add_library(blackjack_core
     src/Agent.cpp
     src/RandomAgent.cpp
     src/BasicStrategyAgent.cpp
+    src/QLearningAgent.cpp
 )
 
 target_include_directories(blackjack_core
@@ -34,3 +35,9 @@ add_executable(evaluate
 )
 
 target_link_libraries(evaluate PRIVATE blackjack_core)
+
+add_executable(train
+    training/train.cpp
+)
+
+target_link_libraries(train PRIVATE blackjack_core)

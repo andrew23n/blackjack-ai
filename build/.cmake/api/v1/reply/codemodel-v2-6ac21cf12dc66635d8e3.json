@@ -18,7 +18,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -35,7 +36,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -44,22 +46,29 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "blackjack::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blackjack-Debug-3949b1e629f501c3e832.json",
+					"jsonFile" : "target-blackjack-Debug-176452892dced8640cc6.json",
 					"name" : "blackjack",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "blackjack_core::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blackjack_core-Debug-2b33cfe7057c98777702.json",
+					"jsonFile" : "target-blackjack_core-Debug-418281583a0feb6c84d1.json",
 					"name" : "blackjack_core",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "evaluate::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-evaluate-Debug-d03b53116ed881acb7ec.json",
+					"jsonFile" : "target-evaluate-Debug-6f10280ac85c7b752325.json",
 					"name" : "evaluate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "train::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-train-Debug-5b03b7e097256cc574b0.json",
+					"name" : "train",
 					"projectIndex" : 0
 				}
 			]
