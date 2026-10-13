@@ -4,9 +4,14 @@
 #include "Deck.h"
 #include "Hand.h"
 
+#include <cstddef>
+#include <vector>
+
 enum class GameAction {
     Hit,
-    Stand
+    Stand,
+    DoubleDown,
+    Split
 };
 
 enum class GameStatus {
@@ -17,40 +22,58 @@ enum class GameStatus {
     Push
 };
 
+struct PlayerHandState {
+    Hand hand;
+    double wager = 0.0;
+    bool finished = false;
+    bool doubled = false;
+    bool splitAces = false;
+    bool naturalEligible = true;
+};
+
 class Game {
 public:
-    Game();
+    explicit Game(double startingBankroll = 1000.0);
 
-    // Starts a new round and deals two cards to each side.
-    void startRound();
-
-    // Executes the player's chosen action.
+    void startRound(double initialBet = 10.0);
     void playAction(GameAction action);
-
-    // Plays the dealer's turn according to Blackjack rules.
     void playDealerTurn();
 
-    // Returns the current round status.
     GameStatus getStatus() const;
-
-    // Returns the player's and dealer's hands.
     const Hand& getPlayerHand() const;
+    const Hand& getPlayerHand(std::size_t index) const;
     const Hand& getDealerHand() const;
 
-    // Returns true when the round has finished.
+    std::size_t getPlayerHandCount() const;
+    std::size_t getActiveHandIndex() const;
+    double getPlayerWager(std::size_t index) const;
+
+    double getBankroll() const;
+    double getRoundProfit() const;
+
     bool isGameOver() const;
 
 private:
     Deck deck;
-    Hand playerHand;
+    std::vector<PlayerHandState> playerHands;
     Hand dealerHand;
+    std::size_t activeHandIndex = 0;
+
     GameStatus status;
+    double bankroll;
+    double roundStartingBankroll;
+    double roundProfit;
+    bool hasSplit = false;
+    bool dealerHasBlackjack = false;
 
-    // Determines the outcome after both turns are complete.
-    void determineWinner();
-
-    // Handles natural Blackjack after the initial deal.
     void checkInitialBlackjack();
+    void advanceToNextHand();
+    void determineWinner();
+    void settleInitialBlackjack();
+    void settleRound();
+    void finishRound();
+    bool canDoubleDown() const;
+    bool canSplit() const;
 };
 
 #endif // GAME_H

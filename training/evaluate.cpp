@@ -1,6 +1,6 @@
 #include "BasicStrategyAgent.h"
 #include "RandomAgent.h"
-#include "game.h"
+#include "Game.h"
 
 #include <iomanip>
 #include <iostream>
