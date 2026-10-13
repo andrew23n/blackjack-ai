@@ -1,85 +1,136 @@
+#include "BasicStrategyAgent.h"
 #include "RandomAgent.h"
-#include "Game.h"
+#include "game.h"
 
 #include <iomanip>
 #include <iostream>
+#include <string>
 
-int main() {
-    constexpr int NUM_ROUNDS = 100000;
-
-    Game game;
-    RandomAgent agent;
-
+struct EvaluationResults {
     int wins = 0;
     int losses = 0;
     int pushes = 0;
+    int rounds = 0;
 
-    for (int i = 0; i < NUM_ROUNDS; ++i) {
+    double averageReward() const {
+        if (rounds == 0) {
+            return 0.0;
+        }
+
+        return static_cast<double>(wins - losses) / rounds;
+    }
+
+    double winRate() const {
+        if (rounds == 0) {
+            return 0.0;
+        }
+
+        return 100.0 * wins / rounds;
+    }
+
+    double lossRate() const {
+        if (rounds == 0) {
+            return 0.0;
+        }
+
+        return 100.0 * losses / rounds;
+    }
+
+    double pushRate() const {
+        if (rounds == 0) {
+            return 0.0;
+        }
+
+        return 100.0 * pushes / rounds;
+    }
+};
+
+EvaluationResults evaluateAgent(Agent& agent, int numRounds) {
+    Game game;
+    EvaluationResults results;
+
+    for (int i = 0; i < numRounds; ++i) {
         game.startRound();
 
-        // Play automatically until the round ends.
         while (!game.isGameOver()) {
             const Hand& playerHand = game.getPlayerHand();
             const Hand& dealerHand = game.getDealerHand();
 
-            // The dealer's first card is the visible upcard.
             const Card& dealerUpcard =
                 dealerHand.getCards().front();
 
-            GameAction action = agent.chooseAction(
-                playerHand,
-                dealerUpcard
-            );
+            GameAction action =
+                agent.chooseAction(playerHand, dealerUpcard);
 
             game.playAction(action);
         }
 
-        // Record the result of this round.
         switch (game.getStatus()) {
             case GameStatus::PlayerWins:
-                ++wins;
+                ++results.wins;
                 break;
 
             case GameStatus::DealerWins:
-                ++losses;
+                ++results.losses;
                 break;
 
             case GameStatus::Push:
-                ++pushes;
+                ++results.pushes;
                 break;
 
             default:
                 break;
         }
+
+        ++results.rounds;
     }
 
-    const double winRate =
-        100.0 * wins / NUM_ROUNDS;
+    return results;
+}
 
-    const double lossRate =
-        100.0 * losses / NUM_ROUNDS;
+void printResults(
+    const std::string& agentName,
+    const EvaluationResults& results
+) {
+    std::cout << "\n===== " << agentName << " =====\n";
 
-    const double pushRate =
-        100.0 * pushes / NUM_ROUNDS;
-
-    // signifies the percentage of wins over losses
-    const double averageReward =
-        static_cast<double>(wins - losses) / NUM_ROUNDS;
+    std::cout << "Rounds: " << results.rounds << '\n';
+    std::cout << "Wins: " << results.wins << '\n';
+    std::cout << "Losses: " << results.losses << '\n';
+    std::cout << "Pushes: " << results.pushes << '\n';
 
     std::cout << std::fixed << std::setprecision(2);
 
-    std::cout << "\n===== Blackjack Simulation =====\n";
-    std::cout << "Agent: RandomAgent\n";
-    std::cout << "Total rounds: " << NUM_ROUNDS << "\n\n";
+    std::cout << "Win rate: "
+              << results.winRate() << "%\n";
 
-    std::cout << "Wins: " << wins << '\n';
-    std::cout << "Losses: " << losses << '\n';
-    std::cout << "Pushes: " << pushes << "\n\n";
+    std::cout << "Loss rate: "
+              << results.lossRate() << "%\n";
 
-    std::cout << "Win rate: " << winRate << "%\n";
-    std::cout << "Loss rate: " << lossRate << "%\n";
-    std::cout << "Push rate: " << pushRate << "%\n";
-    std::cout << "Average reward: " << averageReward << '\n';
+    std::cout << "Push rate: "
+              << results.pushRate() << "%\n";
+
+    std::cout << "Average reward: "
+              << results.averageReward() << '\n';
+}
+
+int main() {
+    constexpr int NUM_ROUNDS = 100000;
+
+    RandomAgent randomAgent;
+    BasicStrategyAgent basicStrategyAgent;
+
+    std::cout << "Running " << NUM_ROUNDS
+              << " rounds per agent...\n";
+
+    EvaluationResults randomResults =
+        evaluateAgent(randomAgent, NUM_ROUNDS);
+
+    EvaluationResults strategyResults =
+        evaluateAgent(basicStrategyAgent, NUM_ROUNDS);
+
+    printResults("RandomAgent", randomResults);
+    printResults("BasicStrategyAgent", strategyResults);
 
     return 0;
 }

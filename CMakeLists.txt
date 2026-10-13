@@ -14,6 +14,7 @@ add_library(blackjack_core
     src/game.cpp
     src/Agent.cpp
     src/RandomAgent.cpp
+    src/BasicStrategyAgent.cpp
 )
 
 target_include_directories(blackjack_core

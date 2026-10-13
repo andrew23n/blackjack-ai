@@ -203,6 +203,30 @@ src/Agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/Agent.cpp.s
 .PHONY : src/Agent.cpp.s
 
+src/BasicStrategyAgent.o: src/BasicStrategyAgent.cpp.o
+.PHONY : src/BasicStrategyAgent.o
+
+# target to build an object file
+src/BasicStrategyAgent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o
+.PHONY : src/BasicStrategyAgent.cpp.o
+
+src/BasicStrategyAgent.i: src/BasicStrategyAgent.cpp.i
+.PHONY : src/BasicStrategyAgent.i
+
+# target to preprocess a source file
+src/BasicStrategyAgent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.i
+.PHONY : src/BasicStrategyAgent.cpp.i
+
+src/BasicStrategyAgent.s: src/BasicStrategyAgent.cpp.s
+.PHONY : src/BasicStrategyAgent.s
+
+# target to generate assembly for a file
+src/BasicStrategyAgent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_core.dir/build.make CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.s
+.PHONY : src/BasicStrategyAgent.cpp.s
+
 src/Card.o: src/Card.cpp.o
 .PHONY : src/Card.o
 
@@ -364,6 +388,9 @@ help:
 	@echo "... src/Agent.o"
 	@echo "... src/Agent.i"
 	@echo "... src/Agent.s"
+	@echo "... src/BasicStrategyAgent.o"
+	@echo "... src/BasicStrategyAgent.i"
+	@echo "... src/BasicStrategyAgent.s"
 	@echo "... src/Card.o"
 	@echo "... src/Card.i"
 	@echo "... src/Card.s"

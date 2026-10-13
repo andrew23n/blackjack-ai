@@ -37,6 +37,12 @@
 },
 {
   "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
+  "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/BasicStrategyAgent.cpp\"",
+  "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/BasicStrategyAgent.cpp",
+  "output": "CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o"
+},
+{
+  "directory": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build",
   "command": "/usr/bin/clang++  -I\"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/include\" -g -std=c++17 -arch arm64 -o CMakeFiles/blackjack.dir/app/main.cpp.o -c \"/Users/andrewnguyen/Desktop/college projects/blackjack_ai/app/main.cpp\"",
   "file": "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/app/main.cpp",
   "output": "CMakeFiles/blackjack.dir/app/main.cpp.o"

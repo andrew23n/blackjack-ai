@@ -156,6 +156,20 @@ CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/RandomAgent.cpp" -o CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.s
 
+CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o: CMakeFiles/blackjack_core.dir/flags.make
+CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o: /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/src/BasicStrategyAgent.cpp
+CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o: CMakeFiles/blackjack_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o -MF CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o.d -o CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o -c "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/BasicStrategyAgent.cpp"
+
+CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/BasicStrategyAgent.cpp" > CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.i
+
+CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/andrewnguyen/Desktop/college projects/blackjack_ai/src/BasicStrategyAgent.cpp" -o CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.s
+
 # Object files for target blackjack_core
 blackjack_core_OBJECTS = \
 "CMakeFiles/blackjack_core.dir/src/Card.cpp.o" \
@@ -163,7 +177,8 @@ blackjack_core_OBJECTS = \
 "CMakeFiles/blackjack_core.dir/src/Hand.cpp.o" \
 "CMakeFiles/blackjack_core.dir/src/game.cpp.o" \
 "CMakeFiles/blackjack_core.dir/src/Agent.cpp.o" \
-"CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o"
+"CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o" \
+"CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o"
 
 # External object files for target blackjack_core
 blackjack_core_EXTERNAL_OBJECTS =
@@ -174,9 +189,10 @@ libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Hand.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/game.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/Agent.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/RandomAgent.cpp.o
+libblackjack_core.a: CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/build.make
 libblackjack_core.a: CMakeFiles/blackjack_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libblackjack_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/andrewnguyen/Desktop/college projects/blackjack_ai/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libblackjack_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/blackjack_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/blackjack_core.dir/link.txt --verbose=$(VERBOSE)
 

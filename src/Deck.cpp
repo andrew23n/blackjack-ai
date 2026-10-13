@@ -18,17 +18,19 @@ Deck::Deck(unsigned int seed)
     shuffle();
 }
 
-// Creates all 52 standard playing cards.
+// Creates a shoe with 6 decks or 312 cards.
 void Deck::initialize() {
     cards.clear();
-    cards.reserve(52);
+    cards.reserve(312);
 
-    for (int suit = 0; suit < 4; ++suit) {
-        for (int rank = 1; rank <= 13; ++rank) {
-            cards.emplace_back(
-                rank,
-                static_cast<Suit>(suit)
-            );
+    for (int deck = 0; deck < 6; ++deck) {
+        for (int suit = 0; suit < 4; ++suit) {
+            for (int rank = 1; rank <= 13; ++rank) {
+                cards.emplace_back(
+                    rank,
+                    static_cast<Suit>(suit)
+                );
+            }
         }
     }
 }

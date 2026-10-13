@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/blackjack_core.dir/src/Agent.cpp.o"
   "CMakeFiles/blackjack_core.dir/src/Agent.cpp.o.d"
+  "CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o"
+  "CMakeFiles/blackjack_core.dir/src/BasicStrategyAgent.cpp.o.d"
   "CMakeFiles/blackjack_core.dir/src/Card.cpp.o"
   "CMakeFiles/blackjack_core.dir/src/Card.cpp.o.d"
   "CMakeFiles/blackjack_core.dir/src/Deck.cpp.o"

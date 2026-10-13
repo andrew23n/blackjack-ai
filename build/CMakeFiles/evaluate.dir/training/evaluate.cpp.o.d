@@ -1,6 +1,6 @@
 CMakeFiles/evaluate.dir/training/evaluate.cpp.o: \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/training/evaluate.cpp \
-  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/RandomAgent.h \
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/BasicStrategyAgent.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Agent.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Card.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
@@ -830,6 +830,8 @@ CMakeFiles/evaluate.dir/training/evaluate.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/RandomAgent.h \
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/game.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \

@@ -844,12 +844,16 @@ CMakeFiles/evaluate.dir/training/evaluate.cpp.o: /Users/andrewnguyen/Desktop/col
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Agent.h \
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/BasicStrategyAgent.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Card.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Deck.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Game.h \
   /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Hand.h \
-  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/RandomAgent.h
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/RandomAgent.h \
+  /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/game.h
 
+
+/Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/game.h:
 
 /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/RandomAgent.h:
 
@@ -858,6 +862,8 @@ CMakeFiles/evaluate.dir/training/evaluate.cpp.o: /Users/andrewnguyen/Desktop/col
 /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Deck.h:
 
 /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Card.h:
+
+/Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/BasicStrategyAgent.h:
 
 /Users/andrewnguyen/Desktop/college\ projects/blackjack_ai/include/Agent.h:
 
