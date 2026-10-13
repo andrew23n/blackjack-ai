@@ -17,9 +17,11 @@ void Game::startRound() {
             "Cannot start a new round while a game is in progress."
         );
     }
-
-    deck.reset();
-
+    
+    // shuffle only when 25% of cards are remaining
+    if (deck.cardsRemaining() <= 78) {
+        deck.reset();
+    }
     // Clear the previous hands.
     playerHand = Hand{};
     dealerHand = Hand{};
